@@ -1,7 +1,7 @@
 {
-  "name": "@xfilante/package-template",
-  "description": "Description of the package here",
-  "version": "0.0.4",
+  "name": "@filante/squid",
+  "description": "Converts database integer IDs to UUIDs and vice versa",
+  "version": "0.0.1",
   "engines": {
     "node": ">=20.6.0"
   },
@@ -12,13 +12,10 @@
     "!build/tests"
   ],
   "exports": {
-    ".": {
-      "types": "./index.ts",
-      "default": "./build/index.js"
-    }
+    ".": "./build/index.js"
   },
-  "homepage": "https://github.com/XFilante/Package-Template#readme",
-  "repository": "https://github.com/XFilante/Package-Template.git",
+  "homepage": "https://github.com/XFilante/Squid#readme",
+  "repository": "https://github.com/XFilante/Squid.git",
   "scripts": {
     "clean": "del-cli build",
     "typecheck": "tsc --noEmit",
@@ -57,20 +54,31 @@
     "prettier": "^3.3.2",
     "ts-node-maintained": "^10.9.4",
     "turbo": "^2.3.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "@adonisjs/core": "^6.15.2",
+    "@vinejs/vine": "^3.0.0",
+    "@filante/service-kit": "^0.0.1"
+  },
+  "peerDependencies": {
+    "@adonisjs/core": "^6.15.2",
+    "@vinejs/vine": "^3.0.0",
+    "@filante/service-kit": "^0.0.1"
   },
   "author": "mohitxskull, XFilante",
   "license": "MIT",
   "keywords": [],
   "prettier": "@adonisjs/prettier-config",
   "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "c8": {
     "exclude": [
       "tests/**"
     ]
   },
-  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
+  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387",
+  "dependencies": {
+    "rand-seed": "^2.1.7",
+    "sqids": "^0.3.0"
+  }
 }

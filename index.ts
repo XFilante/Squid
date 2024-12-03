@@ -7,4 +7,5 @@
 |
 */
 
-export * from './src/add.js'
+export * from './src/index.js'
+export * from './src/factory.js'
